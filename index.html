@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form action="" class="form-login">
+        <h1>Login</h1>
+
+        <div class="campos-usuario">
+            <input type="text">
+            <span data-placeholder="Nome de usuário"></span>
+        </div>
+
+        <div class="campos-usuario">
+            <input type="password">
+            <span data-placeholder="Senha"></span>
+        </div>
+
+        <input type="submit" class="botao-login" value="Entrar">
+
+        <div class="texto-inferior">
+            Não possui uma conta? <a href="#">Registrar-se</a>
+        </div>
+    </form>
+</body>
+
+<script>
+    $(".campos-usuario input").on("focus", function () {
+        $(this).addClass("focus");
+    });
+
+    $(".campos-usuario input").on("blur", function () {
+        if ($(this).val() == "")
+            $(this).removeClass("focus");
+    });
+</script>
+
+</html>
